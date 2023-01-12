@@ -37,6 +37,7 @@ builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromDays(1);
 });
+builder.Services.AddApplicationInsightsTelemetry();
 
 
 
