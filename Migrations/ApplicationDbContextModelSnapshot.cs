@@ -37,7 +37,7 @@ namespace Nothing.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RecordId")
+                    b.Property<Guid?>("RecordId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -56,10 +56,16 @@ namespace Nothing.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FileString")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Phone")
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
@@ -82,10 +88,16 @@ namespace Nothing.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -102,11 +114,11 @@ namespace Nothing.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("FirstLevelId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<bool>("IsItMainFile")
                         .HasColumnType("bit");
+
+                    b.Property<Guid?>("PartId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("ProductId")
                         .HasColumnType("uniqueidentifier");
@@ -114,26 +126,19 @@ namespace Nothing.Migrations
                     b.Property<Guid?>("RecordId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("SecondLevelId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("StringFile")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ThirdLevelId")
+                    b.Property<Guid?>("UserAdminId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FirstLevelId");
 
                     b.HasIndex("ProductId");
 
                     b.HasIndex("RecordId");
 
-                    b.HasIndex("SecondLevelId");
-
-                    b.HasIndex("ThirdLevelId");
+                    b.HasIndex("UserAdminId");
 
                     b.ToTable("File");
                 });
@@ -157,38 +162,60 @@ namespace Nothing.Migrations
                     b.ToTable("Score");
                 });
 
-            modelBuilder.Entity("Nothing.Models.Shop.CustomProduct", b =>
+            modelBuilder.Entity("Nothing.Models.Shop.Customizer.Part", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("FirstLevelId")
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("FileMainId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ItemOrderId")
+                    b.Property<Guid>("FileSecondaryId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ProductId")
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("StepPart")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Part");
+                });
+
+            modelBuilder.Entity("Nothing.Models.Shop.Customizer.PartProductCustom", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("SecondLevelId")
+                    b.Property<Guid>("ClientId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ThirdLevelId")
+                    b.Property<Guid>("PartId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductCustomId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FirstLevelId");
+                    b.HasIndex("ClientId");
 
-                    b.HasIndex("ItemOrderId");
+                    b.HasIndex("PartId");
 
-                    b.HasIndex("SecondLevelId");
+                    b.HasIndex("ProductCustomId");
 
-                    b.HasIndex("ThirdLevelId");
-
-                    b.ToTable("CustomProduct");
+                    b.ToTable("PartProductCustom");
                 });
 
             modelBuilder.Entity("Nothing.Models.Shop.ItemOrder", b =>
@@ -200,7 +227,10 @@ namespace Nothing.Migrations
                     b.Property<Guid>("OrderId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ProductId")
+                    b.Property<Guid?>("ProductCustomId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ProductId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
@@ -210,31 +240,11 @@ namespace Nothing.Migrations
 
                     b.HasIndex("OrderId");
 
+                    b.HasIndex("ProductCustomId");
+
                     b.HasIndex("ProductId");
 
                     b.ToTable("ItemOrder");
-                });
-
-            modelBuilder.Entity("Nothing.Models.Shop.Level", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Level");
                 });
 
             modelBuilder.Entity("Nothing.Models.Shop.Order", b =>
@@ -246,11 +256,17 @@ namespace Nothing.Migrations
                     b.Property<Guid>("ClientId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int?>("Consecutive")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DeliveryDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -274,23 +290,26 @@ namespace Nothing.Migrations
                     b.Property<Guid?>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("CustomProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CustomProductId1")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("EquityPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid?>("ProductCustoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("ProductCustomId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -305,30 +324,41 @@ namespace Nothing.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("CustomProductId1");
+                    b.HasIndex("ProductCustomId");
 
                     b.HasIndex("RecordId");
 
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("Nothing.Models.Shop.ProductCustom", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Estado")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductCustom");
+                });
+
             modelBuilder.Entity("Nothing.Models.Gen.Category", b =>
                 {
                     b.HasOne("Nothing.Models.Gen.UserAdmin", "Record")
                         .WithMany()
-                        .HasForeignKey("RecordId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RecordId");
 
                     b.Navigation("Record");
                 });
 
             modelBuilder.Entity("Nothing.Models.Shared.File", b =>
                 {
-                    b.HasOne("Nothing.Models.Shop.Level", "FirstLevel")
-                        .WithMany()
-                        .HasForeignKey("FirstLevelId");
-
                     b.HasOne("Nothing.Models.Shop.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId");
@@ -337,23 +367,15 @@ namespace Nothing.Migrations
                         .WithMany()
                         .HasForeignKey("RecordId");
 
-                    b.HasOne("Nothing.Models.Shop.Level", "SecondLevel")
+                    b.HasOne("Nothing.Models.Gen.UserAdmin", "UserAdmin")
                         .WithMany()
-                        .HasForeignKey("SecondLevelId");
-
-                    b.HasOne("Nothing.Models.Shop.Level", "ThirdLevel")
-                        .WithMany()
-                        .HasForeignKey("ThirdLevelId");
-
-                    b.Navigation("FirstLevel");
+                        .HasForeignKey("UserAdminId");
 
                     b.Navigation("Product");
 
                     b.Navigation("Record");
 
-                    b.Navigation("SecondLevel");
-
-                    b.Navigation("ThirdLevel");
+                    b.Navigation("UserAdmin");
                 });
 
             modelBuilder.Entity("Nothing.Models.Shared.Score", b =>
@@ -367,33 +389,31 @@ namespace Nothing.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Nothing.Models.Shop.CustomProduct", b =>
+            modelBuilder.Entity("Nothing.Models.Shop.Customizer.PartProductCustom", b =>
                 {
-                    b.HasOne("Nothing.Models.Shop.Level", "FirstLevel")
+                    b.HasOne("Nothing.Models.Gen.Client", "Client")
                         .WithMany()
-                        .HasForeignKey("FirstLevelId")
+                        .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Nothing.Models.Shop.ItemOrder", "ItemOrder")
+                    b.HasOne("Nothing.Models.Shop.Customizer.Part", "Part")
                         .WithMany()
-                        .HasForeignKey("ItemOrderId");
+                        .HasForeignKey("PartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Nothing.Models.Shop.Level", "SecondLevel")
+                    b.HasOne("Nothing.Models.Shop.ProductCustom", "ProductCustom")
                         .WithMany()
-                        .HasForeignKey("SecondLevelId");
+                        .HasForeignKey("ProductCustomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Nothing.Models.Shop.Level", "ThirdLevel")
-                        .WithMany()
-                        .HasForeignKey("ThirdLevelId");
+                    b.Navigation("Client");
 
-                    b.Navigation("FirstLevel");
+                    b.Navigation("Part");
 
-                    b.Navigation("ItemOrder");
-
-                    b.Navigation("SecondLevel");
-
-                    b.Navigation("ThirdLevel");
+                    b.Navigation("ProductCustom");
                 });
 
             modelBuilder.Entity("Nothing.Models.Shop.ItemOrder", b =>
@@ -404,26 +424,19 @@ namespace Nothing.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Nothing.Models.Shop.ProductCustom", "ProductCustom")
+                        .WithMany()
+                        .HasForeignKey("ProductCustomId");
+
                     b.HasOne("Nothing.Models.Shop.Product", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.Navigation("Order");
 
                     b.Navigation("Product");
-                });
 
-            modelBuilder.Entity("Nothing.Models.Shop.Level", b =>
-                {
-                    b.HasOne("Nothing.Models.Gen.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
+                    b.Navigation("ProductCustom");
                 });
 
             modelBuilder.Entity("Nothing.Models.Shop.Order", b =>
@@ -443,9 +456,9 @@ namespace Nothing.Migrations
                         .WithMany()
                         .HasForeignKey("CategoryId");
 
-                    b.HasOne("Nothing.Models.Shop.CustomProduct", "CustomProduct")
+                    b.HasOne("Nothing.Models.Shop.ProductCustom", "ProductCustom")
                         .WithMany()
-                        .HasForeignKey("CustomProductId1");
+                        .HasForeignKey("ProductCustomId");
 
                     b.HasOne("Nothing.Models.Gen.UserAdmin", "Record")
                         .WithMany()
@@ -453,7 +466,7 @@ namespace Nothing.Migrations
 
                     b.Navigation("Category");
 
-                    b.Navigation("CustomProduct");
+                    b.Navigation("ProductCustom");
 
                     b.Navigation("Record");
                 });

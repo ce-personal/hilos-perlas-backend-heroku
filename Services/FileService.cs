@@ -16,7 +16,9 @@ namespace Nothing.Services
                 Date = DateTime.Now,
                 IsItMainFile = file.IsItMainFile,
                 ProductId = file.ProductId,
-                StringFile = file.StringFile
+                StringFile = file.StringFile,
+                UserAdminId = file.UserAdminId,
+                PartId = file.PartId,
             };
 
             await _context.AddAsync(model);

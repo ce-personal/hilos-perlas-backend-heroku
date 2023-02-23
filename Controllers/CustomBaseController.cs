@@ -9,6 +9,6 @@ namespace Nothing.Controllers
         public CustomBaseController(ApplicationDbContext context) 
         {
             _context = context;
-        }
+        }   
     }
 }

@@ -2,6 +2,7 @@
 using Nothing.Models.Gen;
 using Nothing.Models.Shared;
 using Nothing.Models.Shop;
+using Nothing.Models.Shop.Customizer;
 
 namespace Nothing.Models
 {
@@ -16,10 +17,11 @@ namespace Nothing.Models
         public DbSet<Category> Category { get; set; }
         
         public DbSet<Product> Product { get; set; }
-        public DbSet<CustomProduct> CustomProduct { get; set; }
-        public DbSet<Level> FirstLevel { get; set; }
-        public DbSet<Level> SecondLevel { get; set; }
-        public DbSet<Level> ThirdLevel { get; set; }
+
+        public DbSet<ProductCustom> ProductCustom { get; set; }
+        public DbSet<Part> Part { get; set; }
+        public DbSet<PartProductCustom> PartProductCustom { get; set; }
+
 
         public DbSet<Order> Order { get; set; }
         public DbSet<ItemOrder> ItemOrder { get; set; }

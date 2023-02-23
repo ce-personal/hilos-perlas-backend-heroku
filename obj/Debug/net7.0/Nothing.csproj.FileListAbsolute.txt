@@ -8,6 +8,13 @@ C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothin
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.ApplicationInsights.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.AI.DependencyCollector.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.AI.EventCounterCollector.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.AI.WindowsServer.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.AI.ServerTelemetryChannel.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
@@ -17,6 +24,9 @@ C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothin
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Extensions.PlatformAbstractions.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -29,11 +39,13 @@ C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothin
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\System.Drawing.Common.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\System.Memory.Data.dll
@@ -48,6 +60,7 @@ C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothin
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\Carlos Espinoza\Dropbox\PC\Desktop\Programacion\Backend\2. C#\2. Nothing\Nothing\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll

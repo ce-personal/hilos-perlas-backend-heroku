@@ -10,16 +10,13 @@ namespace Nothing.Models.Shared
         public DateTime Date { get; set; }
         public Guid? RecordId { get; set; }
         public Guid? ProductId { get; set; }
-        public Guid? FirstLevelId { get; set; }
-        public Guid? SecondLevelId { get; set; }
-        public Guid? ThirdLevelId { get; set; }
+        public Guid? UserAdminId { get; set; }
         public bool IsItMainFile { get; set; }
 
 
         public UserAdmin? Record { get; set; }
         public Product? Product { get; set; }
-        public Level? FirstLevel { get; set; }
-        public Level? SecondLevel { get; set; }
-        public Level? ThirdLevel { get; set; }
+        public UserAdmin? UserAdmin { get; set; }
+        public Guid? PartId { get; set; }
     }
 }

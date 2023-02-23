@@ -6,6 +6,8 @@ namespace Nothing.Models.Shop
     {
         public Guid Id { get; set; }
         public Guid ClientId { get; set; }
+        public string? Name { get; set; }
+        public int? Consecutive { get; set; }
         public DateTime Date { get; set; }
         public string? Ubication { get; set; }
         public DateTime DeliveryDate { get; set; }
@@ -17,9 +19,8 @@ namespace Nothing.Models.Shop
     public enum StatusOrder 
     {
         Solicitado,
-        Recibido,
+        Aceptado,
         EnProduccion,
-        Terminado,
-        Entregado
+        Terminado
     }
 }

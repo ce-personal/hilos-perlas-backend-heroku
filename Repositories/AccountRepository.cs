@@ -22,8 +22,32 @@ namespace Nothing.Services
             return resultado;
         }
 
+        public async Task<Client?> GetClientByEmail(string email)
+        {
+            var resultado = await _context.Client
+                .Where(a => a.Email == email)
+                .FirstOrDefaultAsync();
 
+            return resultado;
+        }
 
-        
+        public async Task<UserAdmin?> GetUserAdminById(Guid userAdminId)
+        {
+            var resultado = await _context.UserAdmin
+                .Where(a => a.Id == userAdminId)
+                .FirstOrDefaultAsync();
+
+            return resultado;
+        }
+
+        public async Task<Client?> GetClientById(Guid clientId)
+        {
+            var resultado = await _context.Client
+                .Where(a => a.Id == clientId)
+                .FirstOrDefaultAsync();
+
+            return resultado;
+        }
+
     }
 }
